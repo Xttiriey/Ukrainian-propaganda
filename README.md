@@ -1,7 +1,7 @@
 # :ukraine: Ukrainian-propaganda
 Ukrainian propaganda malware for fun
 
-# :trollface: Functions:
+# :gear: Functions:
   `Changing wallpaper on flag of Ukraine`
   `Anti virtual machine`
   `Autorun`
