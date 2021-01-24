@@ -9,6 +9,7 @@ namespace Ukrainian_propaganda
     {
         private static readonly string ExecutablePath = Assembly.GetEntryAssembly().Location;
         private static readonly string TempPath = Path.GetTempPath();
+        
         public static void IsVirtualMachine()
         {
             string gpu = GetGPUName().ToLower();
